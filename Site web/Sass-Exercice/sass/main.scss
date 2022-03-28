@@ -13,19 +13,30 @@ $openSans:"Open Sans", helvetica, arial, sans-serif;
 
 header{
     background-color: $dark_grey;
-    padding: 5%;
+    padding: 0%;
     h1{
         color: $yellow;
         font-family: $grandHotel;
         margin: 0;
-        text-align: center;
+        text-align:start;
+        
     }
     p{
         color: $light;
         font-family: $openSans;
-        text-align: center;
+        text-align: start;
+        
+       
+
+        
     }
+    form{
+        
+    }
+    
+   
 }
+
 
 #search{
     display: block;
