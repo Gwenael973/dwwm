@@ -1,0 +1,147 @@
+.all{
+   
+    background-color: dimgray;
+    color: aliceblue;
+    margin-left: 250px;
+    margin-top: 150px;
+    margin-right: 250px;
+    width: auto;
+    height: 1500px;
+    
+}
+
+body{
+    
+   
+    background-image:url(/image/fond.png);
+    font-family:'Courgette', cursive;
+
+}
+
+h1{
+    
+    
+    font-size: 68px;
+    position: fixed;
+    color: #e0dfdc;
+    background: dimgray;
+    letter-spacing: .1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+
+    
+    
+}
+
+
+
+
+.img{
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+
+.banana{
+    display: flex;
+    font-size: 45px;
+    text-decoration: underline;
+    margin-left: 15px;
+    border: 1px solid black;
+    display:inline-flex;
+
+}
+
+  
+
+  .description{
+      display: flex;
+
+     
+     
+      
+  }
+.descriptif{
+    justify-content: center;
+    
+   
+}
+
+
+
+.ingredient{
+    display: flex;
+    text-align: justify;
+    
+    margin-top: 150px;
+    margin-right: 500px;
+    border: 3px solid black;
+    
+}
+
+.valeurinfo{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    padding-top: 200px;
+    justify-content: space-evenly;
+
+}
+
+/*CARROUSSEL*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    overflow: hidden;
+    border-radius:50%;
+    border: 5px solid black;
+}
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+.menu label:hover,.menu label:focus {
+    background: #1c87c9;
+}
+.slide-input{
+    opacity: 0;
+}
+.slide-img {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide-img {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+

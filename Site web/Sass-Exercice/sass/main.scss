@@ -1,0 +1,97 @@
+$yellow: #ff0;
+$light_yellow: #ff4;
+$dark_grey: #222;
+$light_grey: #444;
+$silver: #eee;
+$light: #fff;
+
+// variables fonts
+$grandHotel:"Grand Hotel", serif;
+$openSans:"Open Sans", helvetica, arial, sans-serif;
+
+/* ###################### HEADER #############################*/
+
+header{
+    background-color: $dark_grey;
+    padding: 5%;
+    h1{
+        color: $yellow;
+        font-family: $grandHotel;
+        margin: 0;
+        text-align: center;
+    }
+    p{
+        color: $light;
+        font-family: $openSans;
+        text-align: center;
+    }
+}
+
+#search{
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* navigation */
+
+aside{
+    background-color: $dark_grey;
+}
+nav{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{
+            text-align: center;
+            border-bottom: $yellow 2px solid;
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 2%;
+            margin-bottom: 2%;
+            // cible le dernier li
+            &:last-child{ // & est mis pour li
+                border-bottom: 0;
+            }
+            a{
+                color: $silver;
+                font-family: $openSans;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.copyright{
+    color: $yellow;
+    font-family: $grandHotel;
+    visibility: hidden;
+    margin: 0;
+}
+
+/*################################# SECTIONS ####################################*/
+.limonade{
+    background-image: url(../images/bg-presentation.jpg);
+    background-size:cover;
+    color: $light;
+    padding: 2%;
+    h1{
+        font-family: $grandHotel;
+    }
+    p{
+        font-family: $openSans; 
+    }
+    blockquote{
+        text-align: right;
+        margin-left: 10%;
+        margin-right: 5%;
+        .quote{
+            font-family: $openSans;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        .mag{
+            font-family: $grandHotel;
+        }
+    }
+}
