@@ -13,35 +13,48 @@ $openSans:"Open Sans", helvetica, arial, sans-serif;
 
 header{
     background-color: $dark_grey;
-    padding: 0%;
+    padding-top: 15px;
+    line-height: 10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    
+   
     h1{
         color: $yellow;
         font-family: $grandHotel;
         margin: 0;
-        text-align:start;
+        width: 200pxpx;
+       
         
     }
     p{
         color: $light;
         font-family: $openSans;
-        text-align: start;
-        
-       
-
-        
+        letter-spacing: 1px;
+        font-size: large;  
+        width: 500px;
+        background-color: blue;
+           
     }
     form{
-        
+        position: absolute;
+        top: 0px;
+        right: 0px; 
     }
-    
-   
 }
-
-
 #search{
-    display: block;
-    margin: 0 auto;
+    
+    
 }
+
+
+
+
+    
+
+
 
 
 /* navigation */
@@ -79,6 +92,8 @@ nav{
     visibility: hidden;
     margin: 0;
 }
+
+
 
 /*################################# SECTIONS ####################################*/
 .limonade{

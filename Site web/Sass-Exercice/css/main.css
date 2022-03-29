@@ -1,22 +1,35 @@
 /* ###################### HEADER #############################*/
 header {
   background-color: #222;
-  padding: 0%;
+  padding-top: 15px;
+  line-height: 10px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
 }
 header h1 {
   color: #ff0;
   font-family: "Grand Hotel", serif;
   margin: 0;
-  text-align: start;
+  width: 200pxpx;
 }
 header p {
   color: #fff;
   font-family: "Open Sans", helvetica, arial, sans-serif;
-  text-align: start;
+  letter-spacing: 1px;
+  font-size: large;
+  width: 500px;
+  background-color: blue;
 }
+header form {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 #search {
-  display: block;
-  margin: 0 auto;
+  size: 200%;
 }
 
 /* navigation */
