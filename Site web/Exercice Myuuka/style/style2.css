@@ -105,7 +105,15 @@ body{
 }
 
 #parentcarou{
+    padding-top:15px ;
+   
     display: flex;
-    position: absolute;
 }
 
+#lol{
+    border: 3px solid black;
+}
+
+#ingredient{
+    border: 2px solid black;
+}

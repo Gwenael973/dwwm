@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <title>Myuka</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style/style2copy.css">
+</head>
+
+<body style="background-image:url(image/fond.png)
+;background-position: center;background-size: 150%; padding: 45px;padding-top: 0px; position:-webkit-sticky;">
+
+
+  <div class="p-1  bg-dark text-white text-center shadow-lg  border border-white   ">
+    <h1 class="display-3">My Yuka </h1>
+    <p class="font-italic  ">Obtenez les informations sur les produits alimentaires</p>
+  </div>
+
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-bottom border-top-0 border border-white ">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Articles disponible</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="#">Contact
+
+          </a>
+
+
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <section class=" p-4 bg-dark mt-3 shadow-lg border border-white  rounded-3 ">
+    <div id="search" class=" w-50 offset-3  border border-dark bg-dark text-white text-center shadow-lg">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Produit a scanner" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">Scan</button>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="parentcarou"
+    class="h-100 d-flex  align-items-center justify-content-evenly border border-light border-top-0 rounded-bottom">
+    <h3>
+      <div class='caroussel_diapo '>
+        <input checked id="carou_un" name="rotation" type="radio">
+        <label for="carou_un"></label>
+        <input id="carou_deux" name="rotation" type="radio">
+        <label for="carou_deux"></label>
+        <input id="carou_trois" name="rotation" type="radio">
+        <label for="carou_trois"></label>
+        <input id="carou_quatre" name="rotation" type="radio">
+        <label for="carou_quatre"></label>
+        <input id="carou_cinq" name="rotation" type="radio">
+        <label for="carou_cinq"></label>
+        <input id="carou_six" name="rotation" type="radio">
+        <label for="carou_six"></label>
+        <input id="carou_sept" name="rotation" type="radio">
+        <label for="carou_sept"></label>
+        <input id="carou_huit" name="rotation" type="radio">
+        <label for="carou_huit"></label>
+        <div class="contenu_carou">
+          <div class="caroussel">
+            <img src="/image/slide1.jpg" alt>
+            <img src="/image/slide2.jpeg" alt>
+            <img src="/image/slide3.jpg" alt>
+            <img src="/image/slide4.jpg" alt>
+            <img src="/image/slide5.png" alt>
+            <img src="/image/slide6.jpg" alt>
+            <img src="/image/slide7.jpg" alt>
+            <img src="/image/slide8.jpg" alt>
+          </div>
+        </div>
+      </div>
+    </h3>
+
+
+    <h3 id="img2" class=" ">
+
+      <img src="/image/ingredient.png" alt="">
+    </h3>
+
+  </div>
+
+
+
+
+
+  <section>
+
+
+    <div class="border border-white p-1 w-100  bg-black  text-center text-light">
+      <h1 class="  w-100  bg-black  text-center text-light  "> Allergènes</h1>
+      <p class="text-decoration-underline">Les allergènes sont soulignés dans la liste d’ingrédients.
+        Peut contenir des traces d’arachides, de graines de sésame, de fruits à coque, de cérales contenant du gluten,
+        d’anhydride sulfureux, de soja et de lait.</p>
+
+    </div>
+
+  </section>
+
+  <section>
+    <div class="cartes bg-dark border-light ">
+
+      <div class="card  ">
+        <img class="card-img-top"
+          src="https://i0.wp.com/www.nourris-ton-corps.fr/wp-content/uploads/2019/02/Groupes-NOVA.jpg?resize=900%2C378&ssl=1">
+        <div class="card-body">
+          <p class="card-text">
+          <h2>NOVA 4</h2></br>Aliments ultra-transformés</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="https://static.openfoodfacts.org/images/attributes/nutriscore-b.svg"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">
+          <h2>Nutri-Score B</h2> </br> Bonne qualité nutritionnelle</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top"
+          src="data:image/png;base64,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"
+          alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">
+          <h2>Huile de palme</h2></br> Contient de l'huile de palme</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="bg-black w-100 text-white text-center text-uppercase  border border-light">
+    <p>Fabriqué en France </p>
+    <p> Entreprise :LIDL</p>
+
+  </div>
+
+
+
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class=" ">
+
+    <footer class="text-center text-lg-start  border border-light" style="background-color: black; ">
+      <div class="container d-flex justify-content-center py-5">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color:#54456b;">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button type="button" class="btn btn-black btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-youtube"></i>
+        </button>
+        <button type="button" class="btn btn-black btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button type="button" class="btn btn-black btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="fab fa-twitter"></i>
+        </button>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Gwen</a>
+        <!-- Modal-->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn  bg-light offset-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@getbootstrap">Contactez nous
+          !</button>
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title " id="exampleModalLabel">Formulaire
+                  </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nom:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Prenom:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Mail:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="https://pornhub.com"><button type="button" class="btn btn-primary">Envoi</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Fin modal-->
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
