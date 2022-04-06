@@ -1,0 +1,10 @@
+Site presentant et decrivant l'univers du Seigneur des anneaux .
+3 pages seront implantés pour décrire les grandes villes de l'histoire.
+
+Ce site est utilisé en bootstrap, et agrémenté avec du css.
+
+Aucune animation n'a été mise en place , et tout est placé via bootstrap .
+le fichier all.css réunis 3/4 des 4 pages .
+
+les pages sont structurés de la meme façon, mais seulement le body a été changé .
+
