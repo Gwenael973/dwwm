@@ -1,0 +1,243 @@
+Les bases de Bootstrap---------------------------------------------------1111111111111111111111111111111
+
+Ajouter des couleurs
+
+    <p class="text-primary">.text-primary</p>
+    <p class="text-secondary">.text-secondary</p>
+    <p class="text-success">.text-success</p>
+    <p class="text-danger">.text-danger</p>
+    <p class="text-warning bg-dark">.text-warning</p>
+    <p class="text-info bg-dark">.text-info</p>
+    <p class="text-light bg-dark">.text-light</p>
+    <p class="text-dark">.text-dark</p>
+    <p class="text-body">.text-body</p>
+    <p class="text-muted">.text-muted</p>
+    <p class="text-white">.text-white</p>
+
+
+Ajouter une couleur de background
+
+    <div class="bg-primary">.bg-primary</div>
+    <div class="bg-secondary">.bg-secondary</div>
+    <div class="bg-success">.bg-success</div>
+    <div class="bg-danger">.bg-danger</div>
+    <div class="bg-warning">.bg-warning</div>
+    <div class="bg-info">.bg-info</div>
+    <div class="bg-light">.bg-light</div>
+    <div class="bg-dark">.bg-dark</div>
+    <div class="bg-white">.bg-white</div>
+    <div class="bg-transparent">.bg-transparent</div>
+
+
+Gérer les dimensions
+
+    <div class="w-25"></div>
+    <div class="w-50"></div>
+    <div class="w-75"></div>
+    <div class="w-100"></div>
+     
+    <!-- Pareil avec height -->
+     
+    <div class="h-..."></div>
+     
+    <div class="vh-100"></div>
+    <div class="vw-100"></div>
+     
+    <div class="min-vh-100"></div>
+    <div class="min-vw-100"></div>
+
+
+
+
+Notions intermédiaires--------------------------------------------------------------22222222222222222222222
+
+Les "breakpoints"
+
+
+Aligner du texte
+
+    <div class="text-start"></div>
+    <div class="text-center"></div>
+    <div class="text-end"></div>
+     
+    <div class="text-md-center text-sm-end text-center"></div>
+
+
+Transformer du texte
+
+    <p class="text-lowercase">tout est en minuscule.</p>
+    <p class="text-uppercase">TOUT EST EN MAJUSCULE.</p>
+    <p class="text-capitalize">Tout Nouveau Mot Commence Par Une Majuscule.</p>
+
+
+Gérer le text-decoration
+
+    <a class="text-decoration-line-through">Texte barré</a>
+    <a class="text-decoration-underline">Texte souligné</a>
+    <a class="text-decoration-none">Texte sans surlignement</a>
+
+
+Mettre en forme
+
+    <p class="fw-bold">Texte en gras.</p>
+    <p class="fw-bolder">Texte très gras.</p>
+    <p class="fw-normal">Texte sans gras.</p>
+    <p class="fw-light">Texte léger.</p>
+    <p class="fw-lighter">Texte très léger.</p>
+    <p class="fst-italic">Texte en italique.</p>
+    <p class="fst-normal">Texte sans italique.</p>
+
+
+Gérer les polices
+
+    <p class="h1">Titre principal</p> <!-- h1, h2, h3, ... h6 -->
+    <h1 class="display-1">Titre principal</h1> <!-- display-1 ... display-6 -->
+      
+    <!-- Pour les descriptions --> 
+    <p class="lead">
+        Viva
+    </p>
+
+
+Gérer les ombres
+
+    <div class="shadow-none">Aucune ombre ici.</div>
+    <div class="shadow-sm">Petite ombre légère.</div>
+    <div class="shadow">Ombre par défaut</div>
+    <div class="shadow-lg">Ombre plutôt large</div>
+
+
+Gérer les bordures
+
+    <span class="border"></span>
+    <span class="border-top"></span>
+    <span class="border-end"></span>
+    <span class="border-bottom"></span>
+    <span class="border-start"></span>
+     
+    <span class="border-0"></span>
+    <span class="border-top-0"></span>
+    <span class="border-end-0"></span>
+    <span class="border-bottom-0"></span>
+    <span class="border-start-0"></span>
+     
+    <span class="border border-primary"></span>
+    <span class="border border-secondary"></span>
+    <span class="borderorder-success"></span>
+    <span class="border border-danger"></span>
+    <span class="border border-warning"></span>
+    <span class="border border-info"></span>
+    <span class="border border-light"></span>
+    <span class="border border-dark"></span>
+    <span class="border border-white"></span>
+
+
+Gérer les bordures arrondies
+
+    <img src="..." class="rounded" alt="...">
+    <img src="..." class="rounded-top" alt="...">
+    <img src="..." class="rounded-end" alt="...">
+    <img src="..." class="rounded-bottom" alt="...">
+    <img src="..." class="rounded-start" alt="...">
+    <img src="..." class="rounded-circle" alt="...">
+    <img src="..." class="rounded-pill" alt="...">
+    <img src="..." class="rounded-0" althei="...">
+     
+    <img src="..." class="rounded-sm" alt="...">
+    <img src="..." class="rounded-lg" alt="...">
+
+
+Gérer les positions / flottants
+
+    <div class="position-static">...</div>
+    <div class="position-relative">...</div>
+    <div class="position-absolute">...</div>
+    <div class="position-fixed">...</div>
+    <div class="position-sticky">...</div> <<<<< ps: sticky top : prend tout la largeur en haut et bouge avec le curseur .mieux que fixed.
+     
+    <div class="float-start">...</div>
+    <div class="float-end">...</div>
+    <div class="float-none">...</div>
+     
+    <div class="float-md-end">...</div> <!-- Sera aligné en tant que flottant, à droite, jusqu'au breakpoint md -->
+
+
+Rendre les iframes responsive
+
+    <div class="ratio ratio-16x9">
+        <iframe allowfullscreen src="https://www.youtube.com/embed/lXgLyCYuYA4"></iframe>
+    </div>
+     
+    <!-- 
+        Formats
+            - ratio-1x1
+            - ratio-16x9
+            - ratio-4x3
+            - ratio-21x9
+    -->
+
+
+Permettre la sélection
+
+    <p class="user-select-all">Le paragraphe sera sélectionné quand cliqué par l'utilisateur.</p>
+    <p class="user-select-auto">Le paragraphe a un comportement normal.</p>
+    <p class="user-select-none">Le paragraphe n'est pas sélectionnable.</p>
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------33333333333333333333333333333333333333333333
+
+
+
+Les grilles
+
+Créer une grille
+
+    <!-- Dans la grille ci-dessous les deux éléments finissent par être l'un en-dessous de l'autre -->
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="bg-danger p-4"></div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="bg-info p-4"></div>
+        </div>
+    </div>
+     
+    <!-- Dans la grille ci-dessous l'élément prend toute la largeur -->
+    <div class="row">
+        <div class="col">
+            <div class="bg-secondary p-4"></div>
+        </div>
+    </div>
+
+
+Prioriser nos éléments
+
+On utilise pour ça la classe .order- suivi de la position que l'on veut donner à notre élément. Cette classe s'utilise sur la colonne. On peut également utiliser les breakpoints pour dire à un élément sa position en fonction de la taille du navigateur.
+
+
+Décaler d'un certains nombre
+
+On peut décaler d'un certains nombre de colonnes nos éléments vers la droite. Pour ça nous utilisons la classe .offset- suivi de 1 à 11 en fonction du nombre de colonnes que nous voulons. On peut également utiliser les breakpoints pour dire à un élément le nombre de colonnes qu'il décalera en fonction de la taille du navigateur.
+
+
+Espacer les éléments
+
+Pour espacer, nous allons utiliser ce que nous appelons des gouttières. On peut les utiliser de trois manières différentes :
+
+    g- - Pour un espacement de toutes les côtés
+
+    gx- - Pour un espacement du côté gauche et droite (horizontal)
+
+    gy- - Pour un espacement du côté haut et bas (vertical)
+
+On associe ensuite un nombre entre 0 à 5 (aucun espace avec 0, énormément avec 5).
+
+
+Aligner verticalement
+
+Nous pouvons utiliser la classe .align-self-center et .align-self-end sur les colonnes que nous voulons aligner verticalement. Si nous souhaitons aligner tous les éléments d'une ligne au centre, nous pouvons utiliser .align-items-center et .align-items-end sur la classe .row.

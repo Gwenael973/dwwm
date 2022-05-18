@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <title>Les BD</title>
+</head>
+
+<body class=" " background="/images/fond.jpg">
+    <div class="container   " id="ensemble">
+
+
+        <h1 class="text">Liste des BD</h1>
+
+        <div class=" w-25 ">
+            <div class="">
+                <p id="messageId">
+                    <label for="id">Id de l'album :</label>
+                    <input type="number" required id="id" value="0" min="0" title="Saisissez un numéro et validez">
+                </p>
+                <p>
+                    <label for="serie">Série :</label>
+                    <input type="text" id="serie" readonly>
+
+                    <label for="numero">Album N° :</label>
+                    <input type="text" id="numero" readonly>
+
+                    <label for="titre">Titre :</label>
+                    <input type="text" id="titre" readonly>
+
+                    <label for="auteur">Auteur :</label>
+                    <input type="text" id="auteur" readonly>
+                </p>
+                <p>
+                    <label for="prix">Prix :</label>
+                    <input type="number" id="prix" readonly>
+                </p>
+                <div is="toto" class="m-2">
+                    <img src="images/noComicsMini.jpeg" id="albumMini">
+                </div>
+            </div>
+            <div class="">
+
+                <img src="images/noComics.jpeg" id="album" class="">
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="searchbar">
+        <label for="Author">Auteur</label>
+        <input type="checkbox" id="Author" />
+        <label for="Serie">Serie</label>
+        <input type="checkbox" id="Serie" />
+        <label for="Title">Titre</label>
+        <input type="checkbox" id="Title" />
+        <br />
+
+        <input type="text" id="queryLoc" value="" />
+        <input type="button" value="Search" onclick="buttonClickGET()" />
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="data/albums.js"></script>
+    <script src="data/series.js"></script>
+    <script src="data/auteurs.js"></script>
+    <script src="js/modeleBD.js"></script>
+</body>
+
+</html>
