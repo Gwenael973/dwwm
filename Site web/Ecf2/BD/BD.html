@@ -13,8 +13,8 @@
     <title>Les BD</title>
 </head>
 
-<body class=" " background="/images/fond.jpg">
-    <div class="container   " id="ensemble">
+<body>
+    <div class="container " id="ensemble">
 
 
         <h1 class="text">Liste des BD</h1>
@@ -57,30 +57,37 @@
 
 
 
-
-
-
-
-
-
-    </div>
-    <div id="searchbar">
-        <label for="Author">Auteur</label>
-        <input type="checkbox" id="Author" />
-        <label for="Serie">Serie</label>
-        <input type="checkbox" id="Serie" />
-        <label for="Title">Titre</label>
-        <input type="checkbox" id="Title" />
-        <br />
-
-        <input type="text" id="queryLoc" value="" />
-        <input type="button" value="Search" onclick="buttonClickGET()" />
-    </div>
     </div>
 
 
+    <div id="menu">
 
 
+
+        <div class="container" id="bouton">
+            <h1> Trier par </h1>
+            <button onclick="serie()" id="serie">collection</button>
+            <button id="Album">Auteur</button>
+            <button id="Albums" onclick=" tousLesAlbums()">Tous les livres</button>
+            <nav class="navbar   ">
+                <form class=" row ">
+                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+
+
+            <div id="card">
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
 
 
 

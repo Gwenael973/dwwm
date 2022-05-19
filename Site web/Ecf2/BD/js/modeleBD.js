@@ -15,14 +15,16 @@ jQuery(document).ready(function($) {
     // console.log(album.titre + " " + serie.nom + " " + auteur.nom);
 
 
-    /*
-    console.log("Liste des albums");
-    albums.forEach(album => {
-        serie = series.get(album.idSerie);
-        auteur = auteurs.get(album.idAuteur);
-        console.log(album.titre+" N°"+album.numero+" Série:"+serie.nom+" Auteur:"+auteur.nom);
-    });
-    */
+
+
+    // console.log("Liste des albums");
+    // albums.forEach(album => {
+    //     serie = series.get(album.idSerie);
+    //     auteur = auteurs.get(album.idAuteur);
+    //     console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom);
+    //     card.innerHTML = auteur.nom + ", Album N°" + album.numero + " " + album.titre + ", Série:" + series.get(album.idSerie).nom;
+    // });
+
 
     /*
     console.log("Liste des albums par série");
@@ -150,89 +152,182 @@ jQuery(document).ready(function($) {
      * 
      * @param {object HTML} element 
      */
-    function prbImg(element) {
-        // console.log(element);
-        if (element.id === "albumMini")
-            element.src = albumDefaultMini;
-        else element.src = albumDefault;
-    }
+
+
+
+
+
+
+
+
 });
 
 
+//////////////////////////////////////////////////////////////////FIN CODE GUILLAUME////////////////////////////////////////////////////////////////////////////////////////////////
 
-let Author = document.getElementById("Author");
-let Serie = document.getElementById("Serie");
-let Title = document.getElementById("Title");
 
-Author.addEventListener("change", function() {
-    if (this.checked) {
-        Serie.checked = false;
-        Title.checked = false;
-        type = "Nom";
-    } else {
-        type = "";
-    }
-});
-Serie.addEventListener("change", function() {
-    if (this.checked) {
-        Title.checked = false;
-        Author.checked = false;
-        type = "Nom";
-    } else {
-        type = "";
-    }
-});
-Title.addEventListener("change", function() {
-    if (this.checked) {
-        Serie.checked = false;
-        Author.checked = false;
-        type = "Nom";
-    } else {
-        type = "";
-    }
-});
+function serie() {
+    const srcImg = "images/"; // emplacement des images de l'appli
+    const albumDefaultMini = srcImg + "noComicsMini.jpeg";
+    const albumDefault = srcImg + "noComics.jpeg";
+    const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
+    const srcAlbum = "albums/"; // emplacement des images des albums en grand
 
-function buttonClickGET() {
-    if (Author.checked) {
-        searchByAuthor();
-    }
-    if (Serie.checked) {
-        searchBySerie();
-    }
-    if (Title.checked) {
-        searchByTitle();
-    }
-}
 
-function searchByAuthor() {
-    var queryLoc = document.getElementById("queryLoc").value;
-    var idAuteurToSave = 0;
-    for (var [idAuteur, auteur] of auteurs.entries()) {
-        if (auteur.nom == queryLoc) {
-            //remplacer le nom de l'auteur ici par le choix de l'utilisateur
-            //on est sur le bon: on sauvegarde l'id, puis on sort de la boucle
-            console.log("on est làààààààààà  " + idAuteur);
-            idAuteurToSave = parseInt(idAuteur);
-            break;
-        }
-    }
 
-    // on a notre idAuteur, on fait notre petit filtre
-    if (idAuteurToSave > 0) {
+
+
+    console.log("Liste des albums par série");
+
+    var element = document.getElementById("card");
+
+
+    for (var [idSerie, serie] of series.entries()) {
+        // Recherche des albums de la série
         for (var [idAlbum, album] of albums.entries()) {
-            if (album.idAuteur == idAuteurToSave) {
-                serie = series.get(album.idSerie);
-                auteur = auteurs.get(album.idAuteur);
-                console.log(
-                    album.titre +
-                    " N°" +
-                    album.numero +
-                    " Série:" +
-                    serie.nom +
-                    " Auteur:" +
-                    auteur.nom
-                );
+            if (album.idSerie == idSerie) {
+                var element2 = document.createElement("p");
+                element2.innerHTML = serie.nom + ", Album N°" + album.numero + " " + album.titre + ", Auteur:" + auteurs.get(album.idAuteur).nom;
+
+                var element3 = document.createElement("div");
+                var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+
+                // Utilisation d'une expression régulière pour supprimer 
+                // les caractères non autorisés dans les noms de fichiers : '!?.":$
+                nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+
+
+
+                element3.innerHTML = '<img src="' + srcAlbumMini + nomFic + ".jpg" + '"/>';
+
+
+
+
             }
+
         }
+        element.appendChild(element2);
+        element2.appendChild(element3);
     }
+
 }
+
+
+
+
+
+
+function tousLesAlbums() {
+    const srcImg = "images/"; // emplacement des images de l'appli
+    const albumDefaultMini = srcImg + "noComicsMini.jpeg";
+    const albumDefault = srcImg + "noComics.jpeg";
+    const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
+    const srcAlbum = "albums/"; // emplacement des images des albums en grand
+
+
+
+
+
+
+
+
+
+    console.log("Liste des albums");
+
+    var element = document.getElementById("card");
+
+    albums.forEach(album => {
+        serie = series.get(album.idSerie);
+        auteur = auteurs.get(album.idAuteur);
+        console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom + album.prix);
+
+        var element2 = document.createElement("div");
+        element2.setAttribute("id", "card2")
+
+        element2.innerHTML = "<div id:'texte'>" +
+            "<h1>" + album.titre + "</h1>" +
+            " "
+
+        +
+        "<h5>" + " N°" + album.numero + "</h5>"
+
+        +
+        " "
+
+        +
+        "<h2>" + " Série:" + serie.nom + "</h2>"
+
+        +
+        " "
+
+        +
+        "<h3>" + " Auteur:" + auteur.nom + "</h3>"
+
+        +
+        " "
+
+        +
+        "<h4>" + "Prix :" + album.prix + "</h4>"
+
+        +
+        "</div>";
+
+
+
+        var element3 = document.createElement("div");
+        element3.setAttribute("id", "img")
+        var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+
+        // Utilisation d'une expression régulière pour supprimer 
+        // les caractères non autorisés dans les noms de fichiers : '!?.":$
+        nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+
+
+
+        element3.innerHTML = '<img src="' + srcAlbumMini + nomFic + ".jpg" + '"/>';
+
+
+
+
+        element.appendChild(element2);
+        element2.appendChild(element3);
+
+    });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+// for (var [idAuteur, auteur] of auteurs.entries()) {
+//     // Recherche des albums de l'auteur
+//     for (var [idAlbum, album] of albums.entries()) {
+//         if (album.idAuteur == idAuteur) {
+//             console.log(auteur.nom + ", Album N°" + album.numero + " " + album.titre + ", Série:" + series.get(album.idSerie).nom);
+//             card.innerHTML = auteur.nom + ", Album N°" + album.numero + " " + album.titre + ", Série:" + series.get(album.idSerie).nom;
+
+//             document.body.append(card);
+
+
+
+
+
+
+//         }
+//     }
+
+
+// }
+
+// element2.innerHTML = '<div class = "container-image">' + '<img src = "' + srcAlbum + nomFic + ".jpg" + '"/>' + "</div>"

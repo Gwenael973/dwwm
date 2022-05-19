@@ -3,7 +3,6 @@ albums.set("1", { titre: "Croc vert", numero: "23", idSerie: "6", idAuteur: "13"
 albums.set("2", { titre: "Machine qui rêve", numero: "46", idSerie: "2", idAuteur: "14", prix: "23.50" });
 albums.set("3", { titre: "La guerre des gloutons (II)", numero: "13", idSerie: "16", idAuteur: "11", prix: "14.50" });
 albums.set("4", { titre: "Le jour du Mayflower", numero: "20", idSerie: "10", idAuteur: "16", prix: "12" });
-albums.set("5", { titre: "Le jour de Gwen le puissant", numero: "20", idSerie: "10", idAuteur: "16", prix: "12" });
 albums.set("6", { titre: "La griffe de Rome", numero: "03", idSerie: "17", idAuteur: "9", prix: "14.50" });
 albums.set("7", { titre: "Le Waltras", numero: "07", idSerie: "13", idAuteur: "8", prix: "15.20" });
 albums.set("8", { titre: "Le sang des comètes", numero: "08", idSerie: "18", idAuteur: "10", prix: "14.50" });
@@ -529,4 +528,4 @@ albums.set("625", { titre: "(Avant la quête) L'emprise", numero: "A05", idSerie
 albums.set("626", { titre: "L'héritage de Jason Mac Lane", numero: "24", idSerie: "10", idAuteur: "16", prix: "14.23" });
 albums.set("627", { titre: "La galerie des gaffes", numero: "ES01", idSerie: "67", idAuteur: "159", prix: "14.52" });
 albums.set("628", { titre: "L'étoile du matin", numero: "21", idSerie: "12", idAuteur: "157", prix: "10.26" });
-albums.set("629", { titre: "Tintin en amérique(édition originale 1932)", numero: "03", idSerie: "28", idAuteur: "31", prix: "1338509.20" });
+albums.set("629", { titre: "Tintin en amérique(édition originale 1932)", numero: "03", idSerie: "28", idAuteur: "31", prix: "15.85" });
