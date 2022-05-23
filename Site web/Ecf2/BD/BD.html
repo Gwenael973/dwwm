@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
     <title>Les BD</title>
 </head>
 
@@ -58,6 +56,37 @@
 
 
     </div>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Meteo</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header  ">
+                <span class="close">&times;</span>
+                <h2>Meteo</h2>
+            </div>
+            <div class="modal-body">
+
+
+
+                <div class="bg-white">
+                    <input class="w-25" id="queryLoc" type="text" value="Paris ">
+                    <input type="button" value="Recherche" onclick="buttonClickGET()">
+                    <p id="zone_meteo">Pas de température, lance une recherche</p>
+
+
+                </div>
+            </div>
+            <div class="modal-footer   ">
+                <h3>Weather</h3>
+            </div>
+        </div>
+
+    </div>
+
 
 
     <div id="menu">
@@ -66,13 +95,20 @@
 
         <div class="container" id="bouton">
             <h1> Trier par </h1>
-            <button onclick="serie()" id="serie">collection</button>
-            <button id="Album">Auteur</button>
-            <button id="Albums" onclick=" tousLesAlbums()">Tous les livres</button>
+            <button onclick=" tousLesAlbums()">Tous les livres</button>
+            <button onclick="RechercheParSerie()">Tri par série</button>
+            <button onclick="RechercheParAuteur()">Tri par auteur</button>
+            <br>
+
+
+
+
+
+
             <nav class="navbar   ">
                 <form class=" row ">
-                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input id="search" class="form-control " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0   bg-white" type="submit">Search</button>
                 </form>
             </nav>
 

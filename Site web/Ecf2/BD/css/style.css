@@ -1,129 +1,228 @@
-                                     ::before,
-                                     ::after {
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        margin: 0;
-                                    }
-                                    
-                                    body {
-                                        font: 1em sans-serif;
-                                        font-family: 'Caveat', cursive;
-                                        height: 100vh;
-                                    }
-                                    
-                                    #ensemble {
-                                        background-color: rgb(236, 231, 225);
-                                        opacity: 95%;
-                                        border-radius: 1%;
-                                        display: none;
-                                    }
-                                    
-                                    #album {
-                                        max-width: 250px;
-                                        max-height: 250px;
-                                    }
-                                    
-                                    #zone_BD {
-                                        background-color: white;
-                                    }
-                                    
-                                    #recherche {
-                                        display: flex;
-                                        justify-content: space-evenly;
-                                        background-color: black;
-                                        width: 100%;
-                                    }
-                                    
-                                    img {
-                                        border: black 3px solid;
-                                    }
-                                    
-                                    form {
-                                        max-width: 300px;
-                                        margin: 0;
-                                        padding: 0 5px;
-                                    }
-                                    
-                                    p>label {
-                                        display: block;
-                                    }
-                                    
-                                    legend {
-                                        background-color: #000;
-                                        color: #fff;
-                                        padding: 3px 6px;
-                                    }
-                                    
-                                    input[type=text],
-                                    input[type=email],
-                                    input[type=number],
-                                    textarea,
-                                    fieldset {
-                                        /* requis pour composer de manière appropriée les éléments
+                                                                                ::before,
+                                                                                ::after {
+                                                                                   box-sizing: border-box;
+                                                                                   padding: 0;
+                                                                                   margin: 0;
+                                                                               }
+                                                                               
+                                                                               body {
+                                                                                   font: 1em sans-serif;
+                                                                                   font-family: 'Caveat', cursive;
+                                                                                   height: 100vh;
+                                                                                   background-image: url(/BD/images/fond.jpg);
+                                                                                   background-attachment: fixed;
+                                                                                   background-size: cover
+                                                                               }
+                                                                               
+                                                                               #ensemble {
+                                                                                   background-color: rgb(236, 231, 225);
+                                                                                   opacity: 95%;
+                                                                                   border-radius: 1%;
+                                                                                   display: none;
+                                                                               }
+                                                                               
+                                                                               #album {
+                                                                                   max-width: 250px;
+                                                                                   max-height: 250px;
+                                                                               }
+                                                                               
+                                                                               #zone_BD {
+                                                                                   background-color: white;
+                                                                               }
+                                                                               
+                                                                               #recherche {
+                                                                                   display: flex;
+                                                                                   justify-content: space-evenly;
+                                                                                   background-color: black;
+                                                                                   width: 100%;
+                                                                               }
+                                                                               
+                                                                               img {
+                                                                                   border: black 3px solid;
+                                                                               }
+                                                                               
+                                                                               form {
+                                                                                   max-width: 300px;
+                                                                                   margin: 0;
+                                                                                   padding: 0 5px;
+                                                                               }
+                                                                               
+                                                                               p>label {
+                                                                                   display: block;
+                                                                               }
+                                                                               
+                                                                               legend {
+                                                                                   background-color: #000;
+                                                                                   color: #fff;
+                                                                                   padding: 3px 6px;
+                                                                               }
+                                                                               
+                                                                               input[type=text],
+                                                                               input[type=email],
+                                                                               input[type=number],
+                                                                               textarea,
+                                                                               fieldset {
+                                                                                   /* requis pour composer de manière appropriée les éléments
      de formulaire sur les navigateurs fondés sur WebKit */
-                                        -webkit-appearance: none;
-                                        width: 100%;
-                                        border: 1px solid #333;
-                                        margin: 0;
-                                        font-family: inherit;
-                                        font-size: 90%;
-                                        -moz-box-sizing: border-box;
-                                        box-sizing: border-box;
-                                    }
-                                    
-                                    input:invalid {
-                                        box-shadow: 0 0 5px 1px red;
-                                    }
-                                    
-                                    input:focus:invalid {
-                                        outline: none;
-                                    }
-                                    
-                                    #erreur {
-                                        color: red;
-                                    }
-                                    
-                                    #card {
-                                        -webkit-box-shadow: 5px 5px 15px 5px #000000;
-                                        box-shadow: 5px 5px 15px 5px #000000;
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                        justify-content: center;
-                                        width: 80%;
-                                        max-width: 1300px;
-                                        margin: 70px auto 0;
-                                        background: crimson;
-                                    }
-                                    
-                                    #card2 {
-                                        border: 1px solid black;
-                                        width: 300px;
-                                        height: auto;
-                                        margin: 10px;
-                                        position: relative;
-                                    }
-                                    
-                                    #texte {
-                                        height: 100%;
-                                        width: 100%;
-                                        position: absolute;
-                                    }
-                                    
-                                    #img {}
-                                    
-                                    nav {
-                                        width: 175px;
-                                    }
-                                    
-                                    button {
-                                        height: 35px;
-                                    }
-                                    
-                                    #footer {
-                                        position: fixed;
-                                        bottom: 0;
-                                        /* on le colle en bas */
-                                        width: 100%;
-                                        /* Hauteur du pied de page */
-                                        background-color: transparent
-                                    }
+                                                                                   -webkit-appearance: none;
+                                                                                   width: 100%;
+                                                                                   border: 1px solid #333;
+                                                                                   margin: 0;
+                                                                                   font-family: inherit;
+                                                                                   font-size: 90%;
+                                                                                   -moz-box-sizing: border-box;
+                                                                                   box-sizing: border-box;
+                                                                               }
+                                                                               
+                                                                               input:invalid {
+                                                                                   box-shadow: 0 0 5px 1px red;
+                                                                               }
+                                                                               
+                                                                               input:focus:invalid {
+                                                                                   outline: none;
+                                                                               }
+                                                                               
+                                                                               #erreur {
+                                                                                   color: red;
+                                                                               }
+                                                                               
+                                                                               #card {
+                                                                                   -webkit-box-shadow: 5px 5px 15px 5px #000000;
+                                                                                   box-shadow: 5px 5px 15px 5px #000000;
+                                                                                   display: flex;
+                                                                                   flex-wrap: wrap;
+                                                                                   justify-content: center;
+                                                                                   width: 80%;
+                                                                                   max-width: 1300px;
+                                                                                   margin: 70px auto 0;
+                                                                                   background: crimson;
+                                                                               }
+                                                                               
+                                                                               #card2 {
+                                                                                   border: 1px solid black;
+                                                                                   width: 300px;
+                                                                                   height: auto;
+                                                                                   margin: 10px;
+                                                                                   position: relative;
+                                                                               }
+                                                                               
+                                                                               #texte {
+                                                                                   height: 100%;
+                                                                                   width: 100%;
+                                                                                   position: absolute;
+                                                                               }
+                                                                               
+                                                                               nav {
+                                                                                   width: 175px;
+                                                                               }
+                                                                               
+                                                                               button {
+                                                                                   height: 35px;
+                                                                               }
+                                                                               
+                                                                               #footer {
+                                                                                   position: fixed;
+                                                                                   bottom: 0;
+                                                                                   /* on le colle en bas */
+                                                                                   width: 100%;
+                                                                                   /* Hauteur du pied de page */
+                                                                                   background-color: transparent
+                                                                               }
+                                                                               /* // MODALE //  */
+                                                                               /* The Modal (background) */
+                                                                               
+                                                                               .modal {
+                                                                                   display: none;
+                                                                                   /* Hidden by default */
+                                                                                   position: fixed;
+                                                                                   /* Stay in place */
+                                                                                   z-index: 1;
+                                                                                   /* Sit on top */
+                                                                                   padding-top: 100px;
+                                                                                   /* Location of the box */
+                                                                                   left: 0;
+                                                                                   top: 0;
+                                                                                   width: 100%;
+                                                                                   /* Full width */
+                                                                                   height: 100%;
+                                                                                   /* Full height */
+                                                                                   overflow: auto;
+                                                                                   /* Enable scroll if needed */
+                                                                                   background-color: rgb(0, 0, 0);
+                                                                                   /* Fallback color */
+                                                                                   background-color: rgba(0, 0, 0, 0.4);
+                                                                                   /* Black w/ opacity */
+                                                                               }
+                                                                               /* Modal Content */
+                                                                               
+                                                                               .modal-content {
+                                                                                   position: relative;
+                                                                                   background-color: #fefefe;
+                                                                                   margin: auto;
+                                                                                   padding: 0;
+                                                                                   border: 1px solid #888;
+                                                                                   width: 80%;
+                                                                                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                                                                   -webkit-animation-name: animatetop;
+                                                                                   -webkit-animation-duration: 0.4s;
+                                                                                   animation-name: animatetop;
+                                                                                   animation-duration: 0.4s
+                                                                               }
+                                                                               /* Add Animation */
+                                                                               
+                                                                               @-webkit-keyframes animatetop {
+                                                                                   from {
+                                                                                       top: -300px;
+                                                                                       opacity: 0
+                                                                                   }
+                                                                                   to {
+                                                                                       top: 0;
+                                                                                       opacity: 2
+                                                                                   }
+                                                                               }
+                                                                               
+                                                                               @keyframes animatetop {
+                                                                                   from {
+                                                                                       top: -300px;
+                                                                                       opacity: 0
+                                                                                   }
+                                                                                   to {
+                                                                                       top: 0;
+                                                                                       opacity: 1
+                                                                                   }
+                                                                               }
+                                                                               /* The Close Button */
+                                                                               
+                                                                               .close {
+                                                                                   color: white;
+                                                                                   float: right;
+                                                                                   font-size: 28px;
+                                                                                   font-weight: bold;
+                                                                               }
+                                                                               
+                                                                               .close:hover,
+                                                                               .close:focus {
+                                                                                   color: #000;
+                                                                                   text-decoration: none;
+                                                                                   cursor: pointer;
+                                                                               }
+                                                                               
+                                                                               .modal-header {
+                                                                                   padding: 2px 16px;
+                                                                                   background-color: rgba(99, 80, 5, 0.19);
+                                                                                   color: rgb(25, 17, 17);
+                                                                               }
+                                                                               
+                                                                               .modal-body {
+                                                                                   padding: 2px 16px;
+                                                                               }
+                                                                               
+                                                                               .modal-footer {
+                                                                                   padding: 2px 16px;
+                                                                                   background-color: rgba(99, 80, 5, 0.19);
+                                                                                   color: rgb(0, 0, 0);
+                                                                               }
+                                                                               
+                                                                               .modal-content {
+                                                                                   width: 250px;
+                                                                               }
