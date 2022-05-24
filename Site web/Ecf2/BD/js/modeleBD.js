@@ -160,6 +160,7 @@ jQuery(document).ready(function($) {
 
 
 
+
 });
 
 
@@ -187,31 +188,47 @@ function buttonClickGET() {
         .always(function() {
             //alert( "finished" );
         });
-}
+} // METEO//
 var callBackGetSuccess = function(data) {
         var element = document.getElementById("zone_meteo");
         element.innerHTML = "La temperature est de " + data.main.temp + "°C";
     }
-    //METEO//
+    //  FIN    METEO//
+
+//CHECKBOX/////////////
+
+$(document).ready(function() {
+
+    $('#checkAuteur').click(function() {
+        $('.checkSerie').prop('checked', false);
+    });
+    $('.checkSerie').click(function() { //CHECKBOX/////////////
+        if ($('.checkSerie').is(':checked')) {
+            $('#checkAuteur').prop('checked', false);
+        } else {
+            $('#checkAuteur').prop('checked', true);
+
+        }
+    });
+
+});
+
+// FIN CHECKBOX/////////////
 
 
-
-
-
-
-
-// Dans un premier temps on va aller recupérer l'id de l'auteur selon la saisie utilisateur (qui sera un input)
-function recherche() {
-    var value = document.querySelector("#search")
-
-
-
-
+// RECHERCHE//////////
+function rechercheAuteur() {
+    element.innerHTML = " ";
+    const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
+    var value = document.getElementById("recherchee").value;
     var idAuteurToSave = 0;
+
+
+
     for (var [idAuteur, auteur] of auteurs.entries()) {
-        if (auteur.nom == value.value) { //remplacer le nom de l'auteur ici par le choix de l'utilisateur
+        if (auteur.nom == value) { //remplacer le nom de l'auteur ici par le choix de l'utilisateur
             //on est sur le bon: on sauvegarde l'id, puis on sort de la boucle
-            console.log("on est làààààààààà  " + idAuteur)
+            console.log("on est làààààààààà  " + idAuteur) // RECHERCHE//////////
             idAuteurToSave = parseInt(idAuteur);
             break;
         }
@@ -222,9 +239,158 @@ function recherche() {
             if (album.idAuteur == idAuteurToSave) {
                 serie = series.get(album.idSerie);
                 auteur = auteurs.get(album.idAuteur);
-                console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom);
+                console.log(album.titre + " Série:" + serie.nom + " Auteur:" + auteur.nom);
+                var element2 = document.createElement("div");
+
+                element2.setAttribute("id", "card2")
+
+
+
+
+                element2.innerHTML =
+                    "<div id:'texte'>" +
+                    "<h1>" + album.titre + "</h1>" +
+                    " "
+
+                +
+
+                " "
+
+                +
+                "<h2>" + " Série:" + serie.nom + "</h2>"
+
+                +
+                " "
+
+                +
+                "<h3>" + "Auteur : " + auteur.nom + "</h3>"
+
+
+                +
+                " "
+
+                +
+                "<h4>" + "Prix :" + album.prix + "</h4>"
+
+                +
+                "</div>";
+                var element3 = document.createElement("div");
+                element3.setAttribute("id", "img")
+                var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+
+                // Utilisation d'une expression régulière pour supprimer 
+                // les caractères non autorisés dans les noms de fichiers : '!?.":$
+                nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+
+
+
+                element3.innerHTML = '<img src="' + srcAlbumMini + nomFic + ".jpg" + '"/>';
+                element.appendChild(element2);
+                element2.appendChild(element3);
             }
         }
+    }
+
+}
+
+function rechercheSerie() {
+    const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
+    element.innerHTML = " ";
+
+    var value = document.getElementById("recherchee").value;
+    console.log("Hey je fonctionne par serie");
+    var idSerieToSave = 0;
+
+
+    for (var [idSerie, serie] of series.entries()) {
+        if (serie.nom == value) { //remplacer le nom de l'auteur ici par le choix de l'utilisateur
+            //on est sur le bon: on sauvegarde l'id, puis on sort de la boucle
+            console.log("on est làààààààààà  " + idSerie) // RECHERCHE//////////
+            idSerieToSave = parseInt(idSerie);
+            break;
+        }
+    }
+    if (idSerieToSave > 0) {
+        for (var [idAlbum, album] of albums.entries()) {
+            if (album.idSerie == idSerieToSave) {
+                serie = series.get(album.idSerie);
+                auteur = auteurs.get(album.idAuteur);
+                console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom);
+                var element2 = document.createElement("div");
+
+                element2.setAttribute("id", "card2")
+
+
+
+
+                element2.innerHTML =
+                    "<div id:'texte'>" +
+                    "<h1>" + album.titre + "</h1>" +
+                    " "
+
+                +
+
+                " "
+
+                +
+                "<h2>" + " Série:" + serie.nom + "</h2>"
+
+                +
+                " "
+
+                +
+                "<h3>" + "Auteur : " + auteur.nom + "</h3>"
+
+
+                +
+                " "
+
+                +
+                "<h4>" + "Prix :" + album.prix + "</h4>"
+
+                +
+                "</div>";
+                var element3 = document.createElement("div");
+                element3.setAttribute("id", "img")
+                var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+
+                // Utilisation d'une expression régulière pour supprimer 
+                // les caractères non autorisés dans les noms de fichiers : '!?.":$
+                nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+
+
+
+                element3.innerHTML = '<img src="' + srcAlbumMini + nomFic + ".jpg" + '"/>';
+                element.appendChild(element2);
+                element2.appendChild(element3);
+
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+function recherche() {
+    var checkauteur = document.getElementById("checkAuteur")
+    var checkserie = document.getElementById("checkSerie");
+
+
+    if (checkauteur.checked == true) {
+        rechercheAuteur();
+
+    } else {
+        rechercheSerie();
+
     }
 
 
@@ -233,14 +399,16 @@ function recherche() {
 
 }
 
+//  FIN FONCTION RECHERCHE//////////
+
+
 
 
 
 
 function RechercheParSerie() {
-    const srcImg = "images/"; // emplacement des images de l'appli
-    const albumDefaultMini = srcImg + "noComicsMini.jpeg";
-    const albumDefault = srcImg + "noComics.jpeg";
+
+
     const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
 
 
@@ -307,7 +475,7 @@ function RechercheParSerie() {
         element.appendChild(element2);
         element2.appendChild(element3);
     }
-    console.log("hello");
+
 
 }
 
@@ -327,7 +495,7 @@ function RechercheParAuteur() {
     const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
     const srcAlbum = "albums/"; // emplacement des images des albums en grand
 
-    console.log("Liste des albums par auteur");
+
     for (var [idAuteur, auteur] of auteurs.entries()) {
         // Recherche des albums de l'auteur
         for (var [idAlbum, album] of albums.entries()) {
@@ -335,8 +503,6 @@ function RechercheParAuteur() {
 
                 var element2 = document.createElement("div");
                 element2.setAttribute("id", "card2")
-                console.log(auteur.nom + ", Album N°" + album.numero + " " + album.titre + ", Série:" + series.get(album.idSerie).nom);
-
                 element2.innerHTML = "<div id:'texte'>" +
                     "<h1>" + auteur.nom + "</h1>" +
                     " "
@@ -394,10 +560,6 @@ function RechercheParAuteur() {
 
     }
 }
-
-
-
-
 
 function tousLesAlbums() {
 
@@ -482,6 +644,17 @@ function tousLesAlbums() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
